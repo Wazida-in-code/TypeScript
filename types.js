@@ -1,0 +1,11 @@
+"use strict";
+let names = "Esha & Tanha";
+console.log(names);
+let numbers = 265899;
+console.log(numbers);
+let isGood = true;
+console.log(isGood);
+let tesing = "Farhana";
+tesing = "Reshmi";
+tesing = true;
+console.log(tesing);
