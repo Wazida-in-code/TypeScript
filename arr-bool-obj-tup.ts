@@ -18,10 +18,25 @@ let mybesteiInfo: {name: string, age: number, role: string, isBeautiful:boolean}
 
 
 
+// optional property in object
+let myInfoinobj:{
+    name: string,
+    age: number,
+    role?: string
+}
+
+ = {
+    name: "WME",
+    age: 18,
+    role: "Student"
+}
+console.log(myInfoinobj);
+
+
 // Tuple
 let we: [string, string] = ["Esha", "Tanha"];
 // console.log(typeof(we));
-console.log(we);
+// console.log(we);
 
 let myInfo: [string, number] = ["Wazida", 18]
-console.log(myInfo);
+// console.log(myInfo);

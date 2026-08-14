@@ -12,9 +12,16 @@ let mybesteiInfo = {
     isBeautiful: true
 };
 // console.log(mybesteiInfo);
+// optional property in object
+let myInfoinobj = {
+    name: "WME",
+    age: 18,
+    role: "Student"
+};
+console.log(myInfoinobj);
 // Tuple
 let we = ["Esha", "Tanha"];
 // console.log(typeof(we));
-console.log(we);
+// console.log(we);
 let myInfo = ["Wazida", 18];
-console.log(myInfo);
+// console.log(myInfo);
