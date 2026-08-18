@@ -88,4 +88,74 @@ function findById<T extends hasId>(user : T[], id: number){
         return findId
 }
 
-console.log(findById([{ id: 1, name: "A" }, { id: 2, name: "B" }], 2));
+// console.log(findById([{ id: 1, name: "A" }, { id: 2, name: "B" }], 2));
+// console.log(findById([{ id: , name: "A" }, { id: , name: "B" }], 3)); // there is missing id & syntax error
+
+
+
+// 008
+// OrderStatus: Placed, Shipped, Delivered, Cancelled. 
+// enum OrderStatus {
+//     Shipped = "Your Product have been Shipped!",
+//     Delivered = "Your Product have been Delivered!",
+//     Cancelled = "Your Request have been cancelled!"
+// }
+// // console.log(OrderStatus.Shipped);
+// console.log(OrderStatus.Delivered);
+// console.log(OrderStatus.Cancelled);
+
+
+
+// 009
+const appConfig = {
+    theme: "dark blue",
+    version: 4.5
+}as const
+
+// console.log(appConfig);
+
+// appConfig.version = 5
+// console.log(appConfig); //Error: TypeScript enum is not supported in strip-only mode
+
+const colors = ["red", "blue", "green"] as const
+// console.log(typeof colors);  // object
+// console.log(typeof colors[0]); //string
+// type colors = typeof colors[0] //[ 'red', 'blue', 'green' ]
+// type colors = typeof colors[1] //[ 'red', 'blue', 'green' ]
+// type colors = typeof colors[2]  // [ 'red', 'blue', 'green' ]
+// type colors = typeof colors[3]
+// console.log(colors);
+
+type color = typeof colors[number]
+const first: color = "blue"
+console.log(first);
+
+
+
+// 010
+interface Employee {
+    name: string,
+    id: number,
+    salary: number,
+    department: string
+}
+
+function updateEmployee(employees: Partial<Employee>){
+    return employees
+}
+type picking =  Pick<Employee, "name" | "id">
+let pickSomething: picking = {
+    name: "Rafi",
+    id: 990
+}
+
+type removeing = Omit<Employee, "salary">
+let removeSomething: removeing = {
+    name: "Rafa",
+    id: 111,
+    department: "CSE"
+}
+
+// console.log(updateEmployee({ name: "Rafi" }));
+// console.log(pickSomething);
+// console.log(removeSomething);

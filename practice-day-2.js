@@ -42,4 +42,27 @@ function findById(user, id) {
     let findId = user.find(item => id === item.id);
     return findId;
 }
-console.log(findById([{ id: 1, name: "A" }, { id: 2, name: "B" }], 2));
+// console.log(findById([{ id: 1, name: "A" }, { id: 2, name: "B" }], 2));
+// console.log(findById([{ id: , name: "A" }, { id: , name: "B" }], 3)); // there is missing id & syntax error
+// 008
+// OrderStatus: Placed, Shipped, Delivered, Cancelled. 
+var OrderStatus;
+(function (OrderStatus) {
+    OrderStatus["Shipped"] = "Your Product have been Shipped!";
+    OrderStatus["Delivered"] = "Your Product have been Delivered!";
+    OrderStatus["Cancelled"] = "Your Request have been cancelled!";
+})(OrderStatus || (OrderStatus = {}));
+// console.log(OrderStatus.Shipped);
+// console.log(OrderStatus.Delivered);
+// console.log(OrderStatus.Cancelled);
+// 009
+const appConfig = {
+    theme: "dark blue",
+    version: 4.5
+};
+// console.log(appConfig);
+// appConfig.version = 5
+// console.log(appConfig); //Error: TypeScript enum is not supported in strip-only mode
+const colors = ["red", "blue", "green"];
+console.log(typeof colors);
+console.log(typeof colors[0]);
